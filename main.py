@@ -24,3 +24,7 @@ async def work(client, message):
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
 app.run()
+
+@app.on_message(filters.command("start"))
+def start_command(client, message):
+    print("This is the /start command")
