@@ -1,5 +1,9 @@
 from os import environ
 from pyrogram import Client
+from pyrogram.types import (
+    ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton)
+
+
 
 api_id = int(environ["API_ID"])
 api_hash = environ["API_HASH"]
@@ -15,3 +19,11 @@ async def work(client, message):
     await app.send_message(message.chat.id, info)
 
 app.run()
+
+@app.send_message(
+    chat_id, "These are inline buttons",
+    reply_markup=InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("Data", callback_data="callback_data")],
+            [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
+        ]))
