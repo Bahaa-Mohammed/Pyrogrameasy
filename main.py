@@ -25,12 +25,12 @@ async def work(client, message):
             [InlineKeyboardButton("Data", callback_data="callback_data")],
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
-    await app.send_document("me", "https://t.me/c/1720035751/2", caption="document caption")
+    await app.send_document("https://t.me/c/1720035751/2", caption="document caption")
 
 
 
-@app.on_message(filters.command("start"))
-async def start_command(client, message):
+@app.on_message(filters.command("love"))
+async def work(client, message):
     print("This is the /start command")
 
 @app.on_message(filters.command(["startt"]))
