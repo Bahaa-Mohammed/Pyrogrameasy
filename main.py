@@ -27,7 +27,7 @@ async def work(client, message):
         ]))
     await app.send_document("me", "https://t.me/c/1720035751/2", caption="document caption")
 
-app.run()
+
 
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
@@ -40,3 +40,5 @@ async def start(bot, update):
         text="Hello there!",
         reply_to_message_id=update.message_id
     )
+
+app.run()
