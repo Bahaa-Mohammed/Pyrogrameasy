@@ -22,7 +22,7 @@ async def work(client, message):
     await app.send_message(message.chat.id, "These are inline buttons",
     reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("Data", callback_data="callback_data")]
+            [InlineKeyboardButton("Data", callback_data="callback_data")],
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
 
