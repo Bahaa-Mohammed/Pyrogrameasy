@@ -24,9 +24,6 @@ async def work(client, message):
             [InlineKeyboardButton("Data", callback_data="callback_data")],
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
-@app.on_message()
-async def photoUrl(client, message):
-    chatID = message.chat.id
-    photoUrl = "https://telegra.ph/file/aa59c3024666f7bc9f712.jpg"
-    app.send_photo(chatID, photoUrl)
+
+   await app.send_photo(message.chat.id, "https://telegra.ph/file/aa59c3024666f7bc9f712.jpg")
 app.run()
