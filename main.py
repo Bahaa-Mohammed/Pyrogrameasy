@@ -25,7 +25,7 @@ async def work(client, message):
             [InlineKeyboardButton("Data", callback_data="callback_data")],
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
-@app.on_message(filters.command(["start"]))
+@app.on_message()
 async def work(client, message):
     await app.send_message(message.chat.id,"Hello there!",
     )
