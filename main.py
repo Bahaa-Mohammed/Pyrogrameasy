@@ -28,5 +28,5 @@ async def work(client, message):
 app.run()
 
 @app.on_message(filters.command("start"))
-def start_command(client, message):
+async def start_command(client, message):
     print("This is the /start command")
