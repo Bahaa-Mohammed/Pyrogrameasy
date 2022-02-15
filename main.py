@@ -1,6 +1,6 @@
 from os import environ
 from pyrogram import Client
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
 from pyrogram.types import (
     ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton)
@@ -30,3 +30,11 @@ app.run()
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
     print("This is the /start command")
+
+@app.on_message(filters.command(["startt"]))
+async def start(bot, update):
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text="Hello there!",
+        reply_to_message_id=update.message_id
+    )
