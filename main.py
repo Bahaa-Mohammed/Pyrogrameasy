@@ -17,8 +17,7 @@ print(info)
 @app.on_message()
 async def work(client, message):
     await app.send_message(message.chat.id, info)
-    await app.send_message(
-    chat.id, "These are inline buttons",
+    await app.send_message(message.chat.id, "These are inline buttons",
     reply_markup=InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("Data", callback_data="callback_data")],
