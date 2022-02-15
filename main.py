@@ -25,10 +25,5 @@ async def work(client, message):
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
 
-   @app.send_photo(
-    chat_id=message.chat.id,
-    photo=photo
-)
-async def work(client, message):
-await app.message.reply_photo(https://telegra.ph/file/aa59c3024666f7bc9f712.jpg)
+ 
 app.run()
