@@ -13,7 +13,7 @@ bot_token = environ["BOT_TOKEN"]
 info = "Greetings from **Heroku**!"
 
 app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
-appp = Client("bots", bot_token="TOKEN")
+appp = Clientt("bots", bot_token="bot_token")
 print(info)
 
 @app.on_message()
