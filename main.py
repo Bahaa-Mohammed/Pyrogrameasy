@@ -25,6 +25,8 @@ async def work(client, message):
             [InlineKeyboardButton("Data", callback_data="callback_data")],
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
+    await app.send_document("me", "https://t.me/c/1720035751/2", caption="document caption")
+
 app.run()
 
 @app.on_message(filters.command("start"))
