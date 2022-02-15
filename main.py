@@ -23,6 +23,5 @@ async def work(client, message):
             [InlineKeyboardButton("Data", callback_data="callback_data")],
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
-    await 
-app.send_photo("https://telegra.ph/file/7e220b8ac1340c9806053.jpg", ttl_seconds=10)
+    await app.send_photo("me", "https://telegra.ph/file/7e220b8ac1340c9806053.jpg", ttl_seconds=10)
 app.run()
