@@ -28,5 +28,5 @@ async def work(client, message):
 async def photoUrl(client, message):
     chatID = message.chat.id
     photoUrl = "https://telegra.ph/file/aa59c3024666f7bc9f712.jpg"
-    client.send_photo(chatID, photoUrl)
+    app.send_photo(chatID, photoUrl)
 app.run()
