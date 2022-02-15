@@ -25,17 +25,14 @@ async def work(client, message):
             [InlineKeyboardButton("Data", callback_data="callback_data")],
             [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
         ]))
-    await app.send_document("https://t.me/c/1720035751/2", caption="document caption")
-
-
 
 @app.on_message(filters.command("love"))
 async def work(client, message):
     print("This is the /start command")
 
 @app.on_message(filters.command(["startt"]))
-async def start(bot, update):
-    await bot.send_message(
+async def work(bot, update):
+    await app.send_message(
         chat_id=update.chat.id,
         text="Hello there!",
         reply_to_message_id=update.message_id
